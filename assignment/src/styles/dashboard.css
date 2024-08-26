@@ -1,0 +1,14 @@
+.dashboard-container {
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.dashboard-container h1 {
+  margin-bottom: 10px;
+}
+.dashboard-container p {
+  font-size: 1.2rem;
+}/*# sourceMappingURL=dashboard.css.map */

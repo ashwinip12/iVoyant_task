@@ -1,0 +1,43 @@
+// login.scss
+
+@import './variables';
+@import './mixins';
+
+.login-container {
+  @include center-vertical;
+  height: 100vh;
+  background-color: $background-color;
+
+  .login-form {
+    @include center-vertical;
+    flex-direction: column;
+    background: #fff;
+    padding: 2rem;
+    @include border-radius();
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      margin-bottom: $margin;
+    }
+
+    .login-input {
+      width: 100%;
+      padding: $padding;
+      margin-bottom: $margin;
+      border: 1px solid #ccc;
+      border-radius: $border-radius;
+      font-family: $font-family;
+    }
+
+    .login-button {
+      @include button-style();
+      width: 100%;
+    }
+
+    .error-message {
+      color: $error-color;
+      font-size: 14px;
+      margin-top: $margin;
+    }
+  }
+}

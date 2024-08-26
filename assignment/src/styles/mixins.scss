@@ -1,0 +1,29 @@
+// _mixins.scss
+
+@mixin center-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin border-radius($radius: $border-radius) {
+  border-radius: $radius;
+}
+
+@mixin button-style($background: $primary-color, $color: #fff) {
+  background-color: $background;
+  color: $color;
+  border: none;
+  padding: $padding;
+  margin: $margin;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: darken($background, 10%);
+  }
+}
+@mixin box-shadow {
+  box-shadow: $box-shadow;
+}

@@ -1,0 +1,19 @@
+@import './variables';
+@import './mixins';
+
+.dashboard-container {
+  background-color: $background-color;
+  color: $text-color;
+  padding: $padding;
+  border-radius: $border-radius;
+  @include box-shadow;
+  text-align: center;
+  
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
