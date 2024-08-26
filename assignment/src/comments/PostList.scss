@@ -1,0 +1,13 @@
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: antiquewhite;
+
+  .post-item {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}

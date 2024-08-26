@@ -1,10 +1,13 @@
 
-import React from 'react';
-import { useGetPostsQuery } from '../services/blogApi';
-import './PostList.scss';
 
-const PostList: React.FC = () => {
-  const { data: posts, error, isLoading } = useGetPostsQuery();
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { useGetPostByIdQuery } from '../services/blogApi';
+import './PostDetail.scss';
+
+const PostDetail: React.FC = () => {
+  const { id } = useParams<{ id: string }>();
+  const { data: post, error, isLoading } = useGetPostByIdQuery(Number(id));
 
   if (isLoading) return <p>Loading...</p>;
 
@@ -29,15 +32,11 @@ const PostList: React.FC = () => {
   }
 
   return (
-    <div className="post-list">
-      {posts?.map((post) => (
-        <div key={post.id} className="post-item">
-          <h2>{post.title}</h2>
-          <p>{post.body}</p>
-        </div>
-      ))}
+    <div className="post-detail">
+      <h1>{post?.title}</h1>
+      <p>{post?.body}</p>
     </div>
   );
 };
 
-export default PostList;
+export default PostDetail;
