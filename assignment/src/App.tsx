@@ -1,35 +1,64 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// // src/App.tsx
+// import React from 'react';
+// import { Provider } from 'react-redux';
+// import { Store } from './redux/store';
+// // import ContentForm from './component/ContentForm';
+// // import ContentList from './component/ContentList';
+// import 'antd'; // Import Ant Design styles
+// import './App.css';
+// import ContentManager from './component/ContentManager';
 
-function App() {
-  const [count, setCount] = useState(0)
+// const App: React.FC = () => {
+//   return (
+//     <Provider store={Store}>
+//       <div className="app">
+//         <h1>Todo</h1>
+//         {/* <ContentForm />
+//         <ContentList /> */}
+//         <ContentManager/>
+//       </div>
+//     </Provider>
+//   );
+// };
 
+// export default App;
+
+// // import React from 'react';
+// // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// // import ContentForm from './component/ContentForm';
+// // import ContentList from './component/ContentList';
+// // import SuccessPage from './component/SucessPage';
+
+
+// // const App: React.FC = () => {
+// //   return (
+// //     <Router>
+// //       <Routes>
+// //         <Route path="/" element={<ContentForm />} />
+// //         <Route path="/list" element={<ContentList />} />
+// //         <Route path="/success" element={<SuccessPage />} />
+// //       </Routes>
+// //     </Router>
+// //   );
+// // };
+
+// // export default App;
+
+// src/App.tsx
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ContentManager from './component/ContentManager';
+import SuccessPage from './component/SuccessPage';
+
+const App: React.FC = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<ContentManager />} />
+        <Route path="/success" element={<SuccessPage />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;

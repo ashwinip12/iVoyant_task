@@ -1,0 +1,54 @@
+// src/components/ContentForm.scss
+
+$content-bg: #a869a1;
+$primary-color: #4CAF50;
+$secondary-color: #da5b35;
+$text-color: #333;
+$font-family: 'Arial', sans-serif;
+
+.content-form {
+  background-color: $content-bg;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+
+  .ant-form-item {
+    margin-bottom: 16px;
+
+    .ant-form-item-label {
+      label {
+        color: $text-color;
+        font-family: $font-family;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .ant-input-textarea {
+    font-family: $font-family;
+  }
+
+  .ant-btn-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      border-color: darken($primary-color, 10%);
+    }
+  }
+
+  .ant-btn-danger {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+      border-color: darken($secondary-color, 10%);
+    }
+  }
+
+  .ant-picker {
+    font-family: $font-family;
+  }
+}
