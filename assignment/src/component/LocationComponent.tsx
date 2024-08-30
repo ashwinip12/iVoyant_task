@@ -18,7 +18,7 @@
 // export default LocationComponent;
 
 import React from 'react';
-import useGeoLocation from './GeoLocation';
+import {useGeoLocation} from './GeoLocation';
 
 
 const LocationComponent: React.FC = () => {
