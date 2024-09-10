@@ -1,14 +1,14 @@
 
 import './App.css'
-import Test  from './component/Test'
+
 
 function App() {
  
 
   return (
     <>
-      
-       <Test/>
+     <div> hello</div> 
+       
     </>
   )
 }

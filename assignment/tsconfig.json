@@ -1,25 +1,43 @@
+// // {
+// //   "files": [],
+// //   "references": [
+// //     { "path": "./tsconfig.app.json" },
+// //     { "path": "./tsconfig.node.json" }
+// //   ]
+// // }
+
+
 // {
 //   "files": [],
 //   "references": [
 //     { "path": "./tsconfig.app.json" },
 //     { "path": "./tsconfig.node.json" }
-//   ]
+//   ],
+//   "compilerOptions": {
+//     "esModuleInterop": true,
+//     "jsx": "react",
+//     "module": "commonjs",
+//     "target": "es6",
+ 
+//     "allowSyntheticDefaultImports": true
+//   }
 // }
+ 
 
 
-{
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
+ {
   "compilerOptions": {
-    "esModuleInterop": true,
-    "jsx": "react",
+    "target": "ES6",
     "module": "commonjs",
-    "target": "es6",
- 
-    "allowSyntheticDefaultImports": true
-  }
+    "jsx": "react",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/jest.d.ts"
+  ]
 }
- 

@@ -3,7 +3,7 @@ import React from 'react';
 {
 return (
 
-<div className='test-id'>Hello</div>
+<div>Hello</div>
 
 )}
 export default Test;
