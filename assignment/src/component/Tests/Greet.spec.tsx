@@ -15,20 +15,22 @@ import { Greet } from '../Greet';
 
 describe('Greet',()=>
 {
-test('renders the Test component', () => {
+it('renders the Test component', () => {
   render(<Greet/>);
     const testElement = screen.getByText(/Hello/i);
   expect(testElement).toBeInTheDocument(); 
 });
 })
 
+
+
+
 describe('Nested',()=>
 {
-test ("greet render with a name", ()=>
+it("greet render with a name", ()=>
 {
 render(<Greet name="ashwini"/>);
 const testElement = screen.getByText(/Hello ashwini/i);
 expect(testElement).toBeInTheDocument();
 })
-
 })
