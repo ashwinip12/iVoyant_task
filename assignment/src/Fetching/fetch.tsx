@@ -14,10 +14,8 @@ const[data,setData]=useState<string[]>([])
    setData(data)
    console.log(data)
    })
- 
+  
  },[setData])
-
- 
 
 return {data}
 }
